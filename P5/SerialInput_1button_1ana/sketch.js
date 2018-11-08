@@ -59,7 +59,7 @@ function draw() {
   stroke(200);      //black lines
   line(0,map(sensor3,0,500,0,350)+100,width,map(sensor3,0,500,0,350)+100);  // draw horizontal line  at the Y position of the cursor
   line(map(sensor2,0,500,0,670),0,map(sensor2,0,500,0,670),height); // draw vertical line  at the X position of the cursor
-text("I am calling on protecting the ocean here.",map(sensor2,0,500,0,670),map(sensor3,0,500,0,350)+100);
+text("I am calling on protecting the ocean here.",map(sensor2,0,500,0,670),map(sensor3,0,500,0,350)+150);
  
    if(sensor1==0 )
   {

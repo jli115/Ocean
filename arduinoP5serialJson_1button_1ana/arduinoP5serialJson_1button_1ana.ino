@@ -12,11 +12,11 @@
 //*****BE SURE TO INSTALL VERSION 5.13.3 OF THE LIBRARY IT INSTALL V6BETA BY DEFAULT 
 
 
-int buttonPin1 = 11;
+int buttonPin1 = 10;
 int analogInPin1 = A0;
 int analogInPin2 = A2;
-int buttonPin2 = 10;
-int buttonPin3 = 9;
+int buttonPin2 = 7;
+int buttonPin3 = 4;
 
 unsigned long lastSend;
 int sendRate = 50;
