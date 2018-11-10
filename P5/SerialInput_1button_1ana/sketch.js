@@ -58,6 +58,7 @@ function draw() {
   image(imgmap,0,0, imgmap.width/2, imgmap.height/2);
   stroke(200);      //black lines
   line(0,map(sensor3,0,500,0,350)+100,width,map(sensor3,0,500,0,350)+100);  // draw horizontal line  at the Y position of the cursor
+<<<<<<< HEAD
   line(map(sensor2,0,500,0,670)+40,0,map(sensor2,0,500,0,670)+40,height); // draw vertical line  at the X position of the cursor
     
 fill(255);                       
@@ -65,6 +66,10 @@ stroke(10);
 textSize(20);
 textAlign(LEFT);   
 text("I am calling on protecting the ocean here.",map(sensor2,0,500,0,670)+50,map(sensor3,0,500,0,350)+100);
+=======
+  line(map(sensor2,0,500,0,670),0,map(sensor2,0,500,0,670),height); // draw vertical line  at the X position of the cursor
+text("I am calling on protecting the ocean here.",map(sensor2,0,500,0,670),map(sensor3,0,500,0,350)+150);
+>>>>>>> 1e889d1cd94f73996faf2ce71e3cb76ff82b1e87
  
    if(sensor1==0 )
   {
