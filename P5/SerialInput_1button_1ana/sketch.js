@@ -58,38 +58,46 @@ function draw() {
   image(imgmap,0,0, imgmap.width/2, imgmap.height/2);
   stroke(200);      //black lines
   line(0,map(sensor3,0,500,0,350)+100,width,map(sensor3,0,500,0,350)+100);  // draw horizontal line  at the Y position of the cursor
-  line(map(sensor2,0,500,0,670),0,map(sensor2,0,500,0,670),height); // draw vertical line  at the X position of the cursor
-text("I am calling on protecting the ocean here.",map(sensor2,0,500,0,670),map(sensor3,0,500,0,350)+100);
+  line(map(sensor2,0,500,0,670)+40,0,map(sensor2,0,500,0,670)+40,height); // draw vertical line  at the X position of the cursor
+    
+fill(255);                       
+stroke(10); 
+textSize(20);
+textAlign(LEFT);   
+text("I am calling on protecting the ocean here.",map(sensor2,0,500,0,670)+50,map(sensor3,0,500,0,350)+100);
  
    if(sensor1==0 )
   {
   image(imgj,0,0,imgj.width/3, imgj.height/3);
-  songj.play();
+  if ( songj.isPlaying() ) { 
+    songj.stop();
+  } else {
+    songj.play();
+    
   }
-    else
-    {
-        songj.stop();
-    }
+  }
 
    if(sensor4==0 )
   {
   image(imgt,800,300,imgt.width/3, imgt.height/3);
-  songt.play();
+    if ( songm.isPlaying() ) { 
+    songm.stop();
+  } else {
+    songm.play();
   }
-    else
-    {
-        songt.stop();
-    }
+  }
+
     
-   if(sensor5==0 )
+   if(sensor5==0)
   {
   image(imgm,400,400,imgm.width/3, imgm.height/3);
-  songm.play();
+  if ( songt.isPlaying() ) { 
+    songt.stop();
+  } else {
+    songt.play();
   }
-    else
-    {
-        songm.stop();
-    }
+  }
+    
   
     var mapNum1, mapNum2;
     mapNum1 = map(sensor2,0,1023,0,window.innerWidth);
@@ -97,9 +105,19 @@ text("I am calling on protecting the ocean here.",map(sensor2,0,500,0,670),map(s
     
   image(imgp, mapNum1, mapNum2,imgp.width/15, imgp.height/15);
     
-    if((mapNum1 >= 400) && (mapNum1 <= 600)){
-        if((mapNum2 >= 1200) && (mapNum2 <= 1600) ){
-              image(imgc,400,400,imgc.width/3, imgc.height/3);
+    if((mapNum1 >= 0) && (mapNum1 <= (500/2))){
+        if((mapNum2 >= 0) && (mapNum2 <= (400/2)) ){
+              image(imga,100,200,imga.width/3, imga.height/3);
+        }
+       }
+    if((mapNum1 >= 500/2) && (mapNum1 <= (800/2))){
+        if((mapNum2 >= 400/2) && (mapNum2 <= (800/2)) ){
+              image(imgu,150,200,imgu.width/3, imgu.height/3);
+        }
+       }
+    if((mapNum1 >= 2000/2) && (mapNum1 <= (2400/2))){
+        if((mapNum2 >= 450/2) && (mapNum2 <= (800/2)) ){
+              image(imgc,950,200,imgc.width/3, imgc.height/3);
         }
        }
 
